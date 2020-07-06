@@ -1,6 +1,4 @@
-<!DOCTYPE html
-><!-- This site was created in Webflow. http://www.webflow.com -->
-<!-- Last Published: Mon Jul 06 2020 12:51:37 GMT+0000 (Coordinated Universal Time) -->
+<!DOCTYPE html>
 <html
   data-wf-domain="jay-4b5f47.webflow.io"
   data-wf-page="5be8dae11f965b7d4c73c478"
@@ -393,5 +391,20 @@
     <!--[if lte IE 9
       ]><script src="//cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script
     ><![endif]-->
+
+
+    <script>
+
+        function check(e)
+    {
+    alert(e.keyCode);
+    }
+    document.onkeydown = function(e) {
+            if (e.ctrlKey && (e.keyCode === 67 || e.keyCode === 86 || e.keyCode === 85 || e.keyCode === 117)) {//Alt+c, Alt+v will also be disabled sadly.
+                alert('not allowed');
+            }
+            return false;
+    };
+    </script>
   </body>
 </html>
